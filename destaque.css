@@ -1,0 +1,20 @@
+div{
+	font-family: 'Arial';
+	background-color: #a8cf45;
+	margin: 10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.resalte_borde{
+	box-shadow: inset 0 0 0 4px #ddd;
+	-moz-transition-duration: 0.3s;
+}
+
+.resalte_borde:hover{
+	box-shadow: inset 0 0 0 4px #555;
+}

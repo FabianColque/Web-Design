@@ -1,0 +1,108 @@
+div{
+	font-family: 'Arial';
+	background-color: #a8cf45;
+	text-align: center;
+	font-weight: bolder;
+	position: relative;
+	width: 120px;
+	height: 50px;
+	margin: 15px 2px;
+	padding: 5px 40px;
+}
+
+.vibra:hover{
+	-moz-animation: 1s vibra infinite;
+}
+
+@-moz-keyframes vibra{
+	5%, 25%, 45%, 65%, 85%{
+		-moz-transform: translateY(-10px);
+	}
+
+	15%, 35%, 55%, 75%, 95%{
+		-moz-transform: translateY(10px);	
+	}
+
+	10%, 30%, 50%, 70%, 90%{
+		-moz-transform: translateX(-10px);
+	}
+
+	20%, 40%, 60%, 80%{
+		-moz-transform: translateX(10px);	
+	}
+}
+
+.chicle:hover{
+	-moz-animation: 1s chicle 1;
+}
+
+@-moz-keyframes chicle{
+	30%{
+		-moz-transform: 
+										scaleX(1.25) scaleY(0.75);
+	}
+
+	40%{
+		-moz-transform: 
+										scaleX(0.75) scaleY(1.25);
+	}
+	60%{
+		-moz-transform: 
+										scaleX(1.15) scaleY(0.85);
+	}
+}
+
+
+
+.click:hover{
+	-moz-animation: 0.6s click 1;
+}
+
+@-moz-keyframes click{
+	25%, 75%{
+		-moz-transform: scale(0.8);
+	}
+	50%{
+		-moz-transform: scale(1.1);	
+	}
+}
+
+
+
+.flash:hover{
+	-moz-animation: 0.5s flash 1;
+}
+
+/*omited the 0% and 100% because the opacity already had that value 1*/
+@-moz-keyframes flash{
+	50%{
+		opacity: 1;
+	}
+
+	25%, 75%{
+		opacity: 0;
+	}
+}
+
+.caja:hover{
+	-moz-animation: 5s cambia_color 2;
+}
+
+@-moz-keyframes cambia_color{
+	0%, 70%{
+		background: blue;
+	}
+	50%{
+		background: red;
+		height: 200px;
+	}
+}
+
+/*@-moz-keyframes cambia_color{
+	from{
+		background: blue;
+	}
+	to{
+		background: yellow;
+	}
+}*/
