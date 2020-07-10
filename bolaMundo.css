@@ -1,0 +1,24 @@
+body{
+  background: #FFF;
+}
+
+.content{
+  width: 92px;
+  height: 92px;
+  margin: 100px;
+  background: url("mapa.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  animation: 1.5s rotation infinite linear;
+  box-shadow: 0px 5px 15px #888;
+}
+
+@keyframes rotation{
+  0%{
+    background-position: 0px 0px;
+
+  } 
+  100%{
+    background-position: -160px 0px;
+  }  
+}
