@@ -1,0 +1,64 @@
+#piramide{
+  position: relative;
+  margin: 80px auto;
+  height: 500px;
+  width: 100px;
+  -moz-transform-style: preserve-3d;
+  -moz-transform-origin: 116px 200px 116px;
+  -moz-transform: rotateY(30deg);
+  -moz-animation: giro 10s infinite linear;
+}
+
+#piramide > div{
+  position: absolute;
+  border-style: solid;
+  border-width: 200px 0px 200px 346px;
+  -moz-transform-origin: 0 0;
+}
+
+#piramide > div:nth-child(1){
+  border-color: transparent transparent
+                transparent rgba(0, 0, 0, 0.8);
+  -moz-transform: rotateX(-60deg)
+                  rotateY(19.5deg)
+                  translateX(-116px)
+                  translateY(-200px)
+                  translateZ(326px);
+}
+
+#piramide > div:nth-child(2){
+  border-color: transparent transparent
+                transparent rgba(255, 0, 0, 0.8);
+  -moz-transform: rotateY(-19.5deg)
+                  rotateX(180deg)
+                  translateY(-400px);
+}
+
+#piramide > div:nth-child(3){
+  border-color: transparent transparent
+                transparent rgba(0, 255, 0, 0.8);
+  -moz-transform: rotateY(90deg)
+                  rotatez(60deg)
+                  rotateX(180deg)
+                  translateY(-400px);
+}
+
+#piramide > div:nth-child(4){
+  border-color: transparent transparent
+                transparent rgba(0, 0, 255, 0.8);
+  -moz-transform: rotateX(60deg)
+                  rotateY(19.5deg);
+}
+
+@-moz-keyframes giro{
+  from{
+    -moz-transform: rotateX(0deg)
+                    rotateY(0deg)
+                    rotateZ(0deg);
+  }
+  to{
+    -moz-transform: rotateX(360deg)
+                    rotateY(360deg)
+                    rotateZ(360deg);
+  }
+}

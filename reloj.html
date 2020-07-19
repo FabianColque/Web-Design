@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Piramide</title>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="reloj.css">
+  
+</head>
+<body>
+  <div id="content">
+    <div id="hours1"   class="rueda"></div>
+    <div id="hours2"   class="rueda"></div>
+    <div id="minutes1" class="rueda"></div>
+    <div id="minutes2" class="rueda"></div>
+    <div id="seconds1" class="rueda"></div>
+    <div id="seconds2" class="rueda"></div>
+  </div>
+  
+  <script>
+    function llenarRueda(rueda, inicio, limite){
+      var ruedaReloj = document.getElementById(rueda);
+      cadena = "";
+      for(i = inicio; i < inicio + 10; i++){
+        cadena = cadena + "<div class='card c" + i%10 + "'>";
+        if (i % 10 <= limite) cadena = cadena + i%10;
+        cadena = cadena + "</div>"; 
+      }
+      ruedaReloj.innerHTML = cadena;
+    }
+    var today = new Date();
+    llenarRueda("hours1", Math.floor(today.getHours()/10), 2);
+    llenarRueda("hours2", today.getHours()%10, 9);
+
+    llenarRueda("minutes1", Math.floor(today.getMinutes()/10), 5);
+    llenarRueda("minutes2", today.getMinutes()%10, 9);
+
+    llenarRueda("seconds1", Math.floor(today.getSeconds()/10), 5);
+    llenarRueda("seconds2", today.getSeconds()%10, 9);
+
+    // tiene problemas com sincronizacion de la animacion css
+    // se resolveria con javascript pero no es el foco de este proyecto
+    // asi que queda asi.
+  </script>
+
+  <!--<div class="card c0">0</div>
+      <div class="card c1">1</div>
+      <div class="card c2">2</div>
+      <div class="card c3">3</div>
+      <div class="card c4">4</div>
+      <div class="card c5">5</div>
+      <div class="card c6">6</div>
+      <div class="card c7">7</div>
+      <div class="card c8">8</div>
+      <div class="card c9">9</div>-->
+</body>
+</html>
